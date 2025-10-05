@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Xona hub",
+   Name = "Xona Hub - Now keyless!",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Xona Hub",
    LoadingSubtitle = "by SuPraa006",
@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Xona Key",
       Subtitle = "Key System",
@@ -36,11 +36,18 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Scripts", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Admin scripts", 4483362458) -- Title, Image
 
 local Button = Tab:CreateButton({
    Name = "Infinite Yeld",
    Callback = function()
    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Namelesse Admin",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
    end,
 })
